@@ -1,0 +1,8 @@
+.link {
+    @extend .article__date;
+    @include flex(row, nowrap, space-between, center);
+    width: 120px;
+    &:hover {
+        opacity: 0.7;
+    }
+}

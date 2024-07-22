@@ -1,0 +1,39 @@
+.header {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+
+  &__container {
+    @extend .container;
+    height: $header-height;
+    @include flex(row, nowrap, space-between, center);
+    @include media("desktop") {
+      height: 100px;
+    }
+  }
+
+  &__navigation {
+    display: none;
+
+    @include media("desktop") {
+      display: block;
+    }
+  }
+
+  &__search {
+    height: 20px;
+    margin-right: 20px;
+    @include media("tablet") {
+      margin-right: 40px;
+    }
+  }
+
+  &__burger {
+    @include media("desktop") {
+      display: none;
+    }
+  }
+}

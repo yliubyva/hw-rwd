@@ -1,0 +1,13 @@
+.button {
+  width: 180px;
+  height: 46px;
+  border: none;
+  background: $color-main;
+  font-family: $font-main;
+  @include text(16px, 700, #fff, 26.56px);
+  &:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+}
+

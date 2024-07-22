@@ -1,0 +1,74 @@
+.section {
+  @extend .container;
+  margin-bottom: 90px;
+
+  &__title {
+    font-family: $font-secondary;
+    @include text(28px, 600, $color-secondary, 46.48px);
+    letter-spacing: 0.1em;
+    &--blog {
+      @include text(48px, 400, $color-secondary, 64px);
+      margin: 70px 0 50px;
+      letter-spacing: 0.05em;
+      text-align: center;
+      @include media("tablet") {
+        text-align: left;
+      }
+      @include media("desktop") {
+        margin-top: 90px;
+      }
+    }
+    &--info {
+      @include text(23px, 400, $color-secondary, 38.18px);
+      margin-bottom: 20px;
+      max-width: 470px;
+    }
+  }
+
+  &__container {
+    @include flex(row, wrap, space-between, start);
+
+    &--the-most-popular {
+      @include media("tablet") {
+        flex-wrap: nowrap;
+        gap: 20px;
+      }
+      @include media("desktop") {
+        gap: 30px;
+      }
+    }
+  }
+
+  &--info {
+    @include flex(row, wrap, space-between, start);
+  }
+
+  &__head {
+    @include flex(column, nowrap, flex-start, flex-start);
+    margin-bottom: 50px;
+    @include media("tablet") {
+      @include flex(row, wrap, space-between, center);
+    }
+    &--info {
+      margin-bottom: 35px;
+      @include media("tablet") {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &__description {
+    font-family: $font-main;
+    @include text(19px, 400, $color-main, 32px);
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+    @include media("tablet") {
+      text-align: right;
+      width: 700px;
+    }
+    @include media("desktop") {
+      text-align: left;
+      width: 470px;
+    }
+  }
+}
