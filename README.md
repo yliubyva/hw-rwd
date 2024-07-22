@@ -1,12 +1,20 @@
-# Homework title
+# Homework Responsive Web Design 
 
 ## About
-Context and progress go here
+Layout creating "Manifest"
 
 ## Installation
 
 1. Clone this repository
-2. Run development server
-
-## Copyright
-This project is licensed under the terms of the MIT license and protected by Udacity Honor Code and Community Code of Conduct. See [license](LICENSE.md) and [disclaimer](LICENSE.DISCLAIMER.md).
+2. Install NPM packages
+    ```bash
+    npm run install
+    ```
+3. Run developmend server 
+    ```bash
+    npm run dev
+    ```
+4. Build for production 
+    ```bash
+    npm run build
+    ```

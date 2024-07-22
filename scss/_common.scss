@@ -1,7 +1,42 @@
 * {
-    padding: 0;
-    margin: 0;
-    &, &::after, &::before  {
-        box-sizing: border-box;
-    }
+  padding: 0;
+  margin: 0;
+  &,
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
 }
+
+body {
+  margin-top: $header-height;
+  @include media("desktop") {
+    margin-top: 100px;
+  }
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+li {
+  list-style: none;
+}
+

@@ -1,0 +1,62 @@
+.footer {
+    background: $color-bg-footer;
+    padding: 70px 0 30px;
+
+    &__container {
+        @extend .container;
+        width: 100%;
+        @include flex(column, nowrap, flex-start, center);
+        gap: 40px;
+        margin-bottom: 40px;
+        @include media("desktop") {
+            @include flex(row, wrap, space-between, center);
+            margin-bottom: 20px;
+        }
+    }
+
+    &__block {
+        text-align: center;
+    }
+
+    &__title {
+        font-family: $font-secondary;
+        @include text(38px, 400, $color-secondary, 64px);
+        margin-bottom: 30px;
+    }
+
+    &__number,
+    &__email {
+        font-family: $font-main;
+        @include text(18px, 400, $color-secondary, 29.88px);
+    }
+
+    &__number {
+        margin-bottom: 15px;
+    }
+
+    &__list {
+        width: 269px;
+        @include flex(row, nowrap, space-between, center);
+    }
+
+    &__item {
+        border: 1px solid $color-main;
+        width: 50px;
+        height: 50px;
+        @include flex(row, nowrap, space-evenly, center);
+        &:hover {
+            background: $color-main;
+        }
+        &:hover .icon {
+            fill: #fff;
+            transition: fill 0.3s ease;
+        }
+    }
+
+    &__copyright {
+        @extend .container;
+        font-family: $font-main;
+        @include text(16px, 400, $color-secondary, 26.56px);
+        text-align: center;
+    }
+}

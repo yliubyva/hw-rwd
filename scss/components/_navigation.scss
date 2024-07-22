@@ -1,0 +1,25 @@
+.navigation {
+    &__list {
+        @include flex(row, nowrap);
+        gap: 42px;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        font-family: $font-main;
+        @include text(14px, 400, $color-secondary, 16.8px);
+        &::after {
+            display: block;
+            text-align: center;
+            content: '';
+            width: 0;
+            border-bottom: 1px solid $color-secondary;
+            transition: width 0.3s ease;
+            transform: translateX(10%);
+        }
+
+        &:hover::after {
+            width: calc(100% - 20%);
+        }
+    }
+}

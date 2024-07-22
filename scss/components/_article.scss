@@ -1,0 +1,112 @@
+.article {
+  @include flex(column, wrap, space-between, center);
+  gap: 30px;
+  margin-bottom: 50px;
+
+  &--blog {
+    flex-direction: column-reverse;
+
+    @include media("tablet") {
+      @include flex(row, wrap, space-between, center);
+
+      &:nth-of-type(2) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &--lates-posts {
+    @include media("tablet") {
+      @include flex(row, wrap, space-between, start);
+
+      &:nth-of-type(2) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    @include media("desktop") {
+      @include flex(column, nowrap);
+
+      &:nth-of-type(2) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-secondary;
+    @include text(23px, 500, $color-secondary, 38.18px);
+
+    &--lates-posts {
+      margin: 25px 0 20px;
+    }
+
+    &--the-most-popular {
+      margin: 20px 0;
+    }
+  }
+
+  &__photo,
+  &__content {
+    max-width: 570px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex: 1;
+  }
+
+  &__category,
+  &__date {
+    font-family: $font-main;
+    @include text(16px, 400, $color-third, 26.56px);
+  }
+
+  &__category,
+  &__date,
+  &__title {
+    letter-spacing: 0.1em;
+  }
+
+  &__category--blog {
+    margin-bottom: 30px;
+  }
+
+  &__date--blog {
+    display: inline-block;
+    margin: 15px 0 50px;
+  }
+
+  &__photo--lates-posts,
+  &__content--lates-posts {
+    max-width: 370px;
+  }
+
+  &__description {
+    font-family: $font-main;
+    @include text(16px, 400, $color-main, 26.56px);
+    letter-spacing: 0.05em;
+  }
+
+  &__info {
+    @include flex(row, wrap, space-between, center);
+  }
+
+  &__details {
+    position: relative;
+  }
+
+  &__link {
+    position: relative;
+    bottom: 15px;
+    right: -273px;
+
+    @include media("tablet") {
+      right: -200px;
+      bottom: 18px;
+    }
+
+    @include media("desktop") {
+      right: -500px;
+      bottom: 20px;
+    }
+  }
+}
